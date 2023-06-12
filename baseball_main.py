@@ -1,3 +1,6 @@
+import mylib
+import dbdb
+
 print('''
 어떤 야구 경기가 궁금하신가요?
 1. 한국야구(KBO) | 2. 해외야구(MLB, NPB)
@@ -22,9 +25,14 @@ if num == '1':
     elif num == '4' :
         import kbo_batter_rank
 
-
-
-
+    elif num == '5':
+        m_list = mylib.kbo()
+        print(m_list)
+        dbdb.save_data(m_list)
+        name = input('선수이름입력: ')
+    m_list = dbdb.get_one_data(name)
+    for m in m_list:
+        print(f'{m[0]}위 {m[1]} - {m[2]}')
 
 elif num == '2' :
     print('''
