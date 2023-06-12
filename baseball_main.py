@@ -16,6 +16,12 @@ if num == '1':
     elif num == '2' :
         import kbo_teamrank
 
+    elif num == '3' :
+        import kbo_pitcher_rank
+
+    elif num == '4' :
+        import kbo_batter_rank
+
 
 
 
@@ -44,6 +50,12 @@ elif num == '2' :
             elif num =='2' :
                 import mlb_national_teamrank
 
+            elif num =='3' :
+                import mlb_national_pitcher_rank
+
+            elif num =='4' :
+                import mlb_national_batter_rank
+
         elif num == '2' :
             print('''
             메이저리그 아메리칸 리그의 어떤 것이 궁금하신가요?
@@ -55,6 +67,12 @@ elif num == '2' :
 
             elif num =='2' :
                 import mlb_american_teamrank
+
+            elif num =='3' :
+                import mlb_american_pitcher_rank
+
+            elif num =='4' :
+                import mlb_american_batter_rank
 
     elif num =='2' :
         print('''
@@ -74,6 +92,12 @@ elif num == '2' :
             elif num =='2' :
                 import npb_central_teamrank
 
+            elif num =='3' :
+                import npb_central_pitcher_rank
+
+            elif num =='4' :
+                import npb_central_batter_rank
+
         elif num =='2' :
             print('''
             퍼시픽 리그의 어떤 것이 궁금하신가요?
@@ -85,3 +109,9 @@ elif num == '2' :
 
             elif num =='2' :
                 import npb_pacific_teamrank
+
+            elif num =='3' :
+                import npb_pacific_pitcher_rank
+
+            elif num =='4' :
+                import npb_pacific_batter_rank
