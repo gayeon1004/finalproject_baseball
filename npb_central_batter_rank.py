@@ -13,10 +13,10 @@ data = {'uCategory':'wbaseball','category':'npb', 'league':'CL', 'year':'2023','
 response = requests.post(url, data=data, headers=headers)
 
 soup = BeautifulSoup(response.text, 'html.parser')
-print(response.status_code)
+# print(response.status_code)
 # print(soup.select('#_pitcherRecord'))
 # print(soup.text)
 dict_example = json.loads(soup.text)
-print(type(dict_example))
+# print(type(dict_example))
 for i in dict_example:
     print(i['rank'], i['playerName'], '(',i['teamName'],')', ' | ', '타율 :', i['AVG'], ' | ', '홈런 :', i['HR'], ' | ', '타점 :', i['RBI'], ' | ', '도루 :', i['SB'], ' | ', '안타 :', i['H'], ' | ', 'OPS :', i['OPS'])

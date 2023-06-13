@@ -15,7 +15,7 @@ response = requests.post(url, data=data, headers=headers)
 soup = BeautifulSoup(response.text, 'html.parser')
 # print(response.status_code)
 # print(soup.select('#_pitcherRecord'))
-print(soup.text)
+# print(soup.text)
 dict_example = json.loads(soup.text)
 # print(type(dict_example))
 for i in dict_example:
