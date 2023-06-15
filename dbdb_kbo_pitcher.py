@@ -7,8 +7,8 @@ def save_data(m_list):
     # sql 문장을 실행시키기 위해 준비
     cursor = con.cursor()
     sql = '''
-    INSERT INTO kbo (name, team)
-    VALUES (?, ?)
+    INSERT INTO kbo_picher (team, name, era, w, sv, kk, whip, war)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
     '''
     cursor.executemany(sql, m_list) # sql 을 실행
     con.commit() # 적용
@@ -42,7 +42,7 @@ def get_one_data(name):
     cursor = con.cursor() 
 
     sql = f'''
-    SELECT * FROM kbo WHERE name = '{name}'
+    SELECT * FROM kbo_picher WHERE name = '{name}'
     '''
     cursor.execute(sql) # sql 을 실행
     # 전체 데이터 보기
